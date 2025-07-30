@@ -13,7 +13,7 @@ def testing():
     return 'Database Connection Successful'
 
 @app.route('/db_create')
-def testing():
+def creating():
     conn = psycopg.connect('postgresql://flasklab_user:BkBajs8ePSBumCOTvAlLqOTRd9gQhbYe@dpg-d24pmt7gi27c73ba47rg-a/flasklab')
     cur = conn.cursor()
     cur.execute('''
@@ -30,7 +30,7 @@ def testing():
     return 'Basketball Table Successfully Created'
 
 @app.route('/db_insert')
-def testing():
+def inserting():
     conn = psycopg.connect('postgresql://flasklab_user:BkBajs8ePSBumCOTvAlLqOTRd9gQhbYe@dpg-d24pmt7gi27c73ba47rg-a/flasklab')
     cur = conn.cursor()
     cur.execute('''
@@ -46,7 +46,7 @@ def testing():
     return 'Basketball Table Successfully Populated'
 
 @app.route('/db_select')
-def testing():
+def selecting():
     conn = psycopg.connect('postgresql://flasklab_user:BkBajs8ePSBumCOTvAlLqOTRd9gQhbYe@dpg-d24pmt7gi27c73ba47rg-a/flasklab')
     cur = conn.cursor()
     cur.execute('''
@@ -65,7 +65,7 @@ def testing():
     return response_string
 
 @app.route('/db_drop')
-def testing():
+def dropping():
     conn = psycopg.connect('postgresql://flasklab_user:BkBajs8ePSBumCOTvAlLqOTRd9gQhbYe@dpg-d24pmt7gi27c73ba47rg-a/flasklab')
     cur = conn.cursor()
     cur.execute('''
